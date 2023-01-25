@@ -1,0 +1,103 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.content {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 3rem;
+}
+
+/*home*/
+#hello {
+    font-size: 3rem;
+    font-style: italic;
+    padding: 1rem;
+}
+
+.intro {
+    min-width: 300px;
+    max-width: 800px;
+    text-align: center;
+    padding:1rem;
+}
+
+.description {
+    padding-inline: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/*music*/
+.artist-card {
+    grid-area: artist;
+}
+
+.no-repeat {
+    grid-area: norepeat;
+    height: fill-parent;
+}
+
+.grid-container {
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+    grid-template-areas:
+    'artist artist norepeat'
+    'artist artist norepeat'
+    'artist artist norepeat'
+    'artist artist norepeat';
+    gap: 1.5rem;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+.card-body {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*gallery*/
+.slider {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(400px * 24);
+    animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-400px * 12));
+    }
+}
+
+.slide {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    padding-inline: 6px;
+}
+
+.slide img {
+    width: 100%;
+}

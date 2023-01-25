@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input required type="text" class="form-control" placeholder="Symbol" aria-label="Symbol" name="symbol" id="symbol"">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="submit">Look Up</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

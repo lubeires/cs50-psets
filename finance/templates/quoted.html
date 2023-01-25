@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <table class="table table-sm w-50 mx-auto">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>{{ stock["name"] }}</th>
+                <th><i><b>{{ stock["price"] | usd }}</b></i></th>
+            </tr>
+        </tbody>
+    </table>
+    <div class="px-auto pt-3">
+        <button type="button" onclick="location.href='/';" class="btn btn-outline-secondary">Return</button>
+    </div>
+{% endblock %}

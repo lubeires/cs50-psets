@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b130738121.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./assets/styles.css" rel="stylesheet">
+    <title>luana</title>
+</head>
+
+<body>
+    <ul class="nav nav-tabs justify-content-center bg-dark">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="./music.html">music</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="./gallery.html">gallery</a>
+        </li>
+    </ul>
+    <div class="content">
+        <code id="hello"></code>
+        <p class="intro">
+            my name is <strong>Luana</strong> and I'm a 19 year old Brazilian (aspiring) self-taught programmer
+            currently taking CS50.
+        </p>
+        <p class="intro">
+            one of my favorite things is art (from music to movies) and, even though I don't produce it myself, I really
+            appreciate the ability to express and generate ideas and feelings through different types of arts.
+        </p>
+    </div>
+    <script>
+        var i = 0;
+        var txt = '<hello, world!>';
+
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("hello").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, 70);
+          }
+        }
+        typeWriter();
+    </script>
+</body>
+
+</html>

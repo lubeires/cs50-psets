@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="row g-3 w-75 mx-auto">
+            <div class="col-sm-7">
+              <input type="text" class="form-control" placeholder="Symbol" name="symbol" id="symbol">
+            </div>
+            <div class="col-sm-3">
+              <input type="number" class="form-control" placeholder="Shares" name="shares" id="shares">
+            </div>
+            <div class="d-grid col-sm">
+                <button class="btn btn-outline-secondary" type="submit">Buy</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: the sorting time for already sorted values ​​(best case) was shorter than the sorting time for those in reverse order (worst case)
+
+sort2 uses: merge sort
+
+How do you know?: it was the fastest program
+
+sort3 uses: selection sort
+
+How do you know?: there was no practical difference in runtime between reversed and sorted values

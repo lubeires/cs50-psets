@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="row g-3 w-75 mx-auto">
+            <div class="col-sm-7">
+                <select class="form-select" name="symbol" id="symbol">
+                    <option selected disabled>Symbol</option>
+                    {% for symbol in symbols %}
+                    <option value="{{ symbol }}">{{ symbol }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-sm-3">
+              <input type="number" class="form-control" placeholder="Shares" name="shares" id="shares">
+            </div>
+            <div class="d-grid col-sm">
+                <button class="btn btn-outline-secondary" type="submit">Sell</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

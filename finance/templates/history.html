@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-sm w-75 mx-auto">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Date/Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <th>{{ transaction["type"] }}</th>
+                <th>{{ transaction["symbol"] }}</th>
+                <th>{{ transaction["shares"] | abs }}</th>
+                <th>{{ transaction["price"] | usd }}</th>
+                <th>{{ transaction["date_time"] }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
